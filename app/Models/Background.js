@@ -1,11 +1,14 @@
 
 export class Background{
     constructor(data){
-        this.img = data.largeImgUrl || data.img
+        this.img = data.img || data.largeImgUrl 
+        this.artist = data.author
     }
     get Template() {
-        return `
-        "url('${this.img}')"
-        `
+        return `url(${this.img})`
+    }
+
+    get DetailsTemplate(){
+        return `Background photograph compliments of user "${this.artist}"`
     }
 }

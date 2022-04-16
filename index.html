@@ -14,52 +14,43 @@
   <title>checkpoint-4</title>
 </head>
 
-<body style="background-image: none">
-  <!-- <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">checkpoint-4</span>
-      </a>
-    </nav>
-  </header> -->
+<body style="background-size: cover;">
   <main>
 
     <div class="container-fluid d-flex justify-content-between flex-column">
 
-      <div class="row border volume">
+      <div class="row volume">
         <div class="col-12 d-flex justify-content-between">
-            <div>left</div> 
-
-            <div>WEATHER </div> 
+            <div class="m-3 p-3">
+              <span class="bg-dark text-light p-3 rounded shadow opacity-50" id="artist"></span>
+            </div> 
+            <div id="weather" class="opacity-75 p-2">
+              <!-- weather template markup in here -->
+            </div> 
         </div>
       </div>
 
-      <div class="row border volume">
+      <div class="row volume">
         <div class="col-12 d-flex justify-content-center">
-          <div class="p-5 ">
-           <h1 id="clock" class="border shadow p-5">
-             <!-- My clock here -->
-           </h1>
+          <div class="p-5">
+            <div class="text-center bg-info text-light opacity-75">Good day!</div>
+            <h1 id="clock" class="shadow p-5 bg-dark text-light" style="font-size: 4em;">
+              <!-- My clock here -->
+            </h1>
           </div>
         </div>
       </div>
 
-      <div class="row border volume">
-        <div class="col-3">
-          <div>
-            IMAGE DEETS: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aliquid reiciendis reprehenderit quidem commodi magni sed in dolor itaque! Cupiditate, pariatur. Rem fugit aliquid, tempore aut sequi aspernatur sunt? Corrupti.
+      <div class="row volume">
+        <div class="col-md-6">
+          <div id="quote" class="bg-dark text-light p-4 rounded shadow">
+            <!-- Quote here -->
           </div>
         </div>
-        <div class="col-6">
-          <div id="quote" onclick="app.quoteController.getQuote()">
-            <!-- Quote here -->quote
-          </div>
-        </div>
-        <div class="col-3">
+        <div class="col-md-6">
           <div>
-            <form class="border bg-dark text-light p-3" onsubmit="app.todosController.addTodo()">
+            <form class="border bg-dark text-light p-3 rounded" onsubmit="app.todosController.addTodo()">
+              <h4>Todo:</h4>
               <div id="todos">
               </div>
               <!-- <input class="m-2" type="checkbox" name="completed" id="completed">
@@ -67,21 +58,11 @@
                 <input id="description" name="description" class="m-2" type="text" placeholder="name it..." required>
                 <button class="m-2" type="submit">New Todo</button>
             </form>
-            Checkboxes
           </div>
         </div>
       </div>
-
-
-
     </div>
   </main>
-
-  <!-- <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p><small>Made with 💖 by Codeworks</small></p>
-    </div>
-  </footer> -->
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

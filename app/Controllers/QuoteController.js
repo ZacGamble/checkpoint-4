@@ -4,10 +4,7 @@ import { quoteService } from "../Services/QuoteService.js";
 function _drawQuote(){
     let template = ''
     ProxyState.quote.forEach(q => template += q.Template)
-    // document.getElementById('quote').innerHTML = template
-    function _getQuote(){
-        _getQuote()
-    }
+    document.getElementById('quote').innerHTML = template
 }
 export class QuoteController{
     constructor(){
