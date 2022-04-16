@@ -25,9 +25,8 @@ class TodosService {
     async getTodos(){
         try {
             const res = await sandboxApi.get('zac/todos')
-            console.log('get todos',res.data);
             ProxyState.todos = res.data.map(t => new Todo(t))
-            ProxyState.todos = [...ProxyState.todos, ]
+            ProxyState.todos = [...ProxyState.todos]
         }
          catch (error) {
             console.error(error)

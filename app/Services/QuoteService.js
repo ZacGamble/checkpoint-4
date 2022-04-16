@@ -6,9 +6,9 @@ class QuoteService{
  
     async getQuote(){
         const res = await sandboxApi.get('quotes')
-        console.log('get quotes',res.data);
-        ProxyState.quote 
-        
+        const quote = new Quote(res.data)
+        ProxyState.quote = [...ProxyState.quote, quote]
+        console.log('get quotes', quote);
     }
 }
 

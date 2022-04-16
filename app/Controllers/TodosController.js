@@ -11,9 +11,7 @@ export class TodosController {
         ProxyState.on('todos', _drawTodos)
         _drawTodos()
         this.getTodos()
-        
     }
-
    async addTodo(id){
         window.event.preventDefault();
         try {
@@ -24,7 +22,6 @@ export class TodosController {
             const todoData = {           
                 description: form.description.value
             }
-            
             console.log(todoData);
        await todosService.addTodo(todoData)
  
@@ -41,13 +38,15 @@ export class TodosController {
        }
     }
     async deleteTodo(id) {
+        if(window.confirm("Are you sure?")){
     try {
-        const deleteTodo = await todosService.deleteTodo(id)
-    } catch (error) {
-        Pop.toast(error.message, 'error')
-        console.log(error);
+            await todosService.deleteTodo(id)
+        } catch (error) {
+            Pop.toast(error.message, 'error')
+            console.log(error);
+        }
     }
-    }
+}
     async trackTodo(id){
         try {
             await todosService.trackTodo(id)

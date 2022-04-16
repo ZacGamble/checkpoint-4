@@ -3,20 +3,20 @@ import { quoteService } from "../Services/QuoteService.js";
 
 function _drawQuote(){
     let template = ''
-    ProxyState.quote.forEach(q => template += `<span>${q.content}</span>
-    <span class="on-hover">${q.author}</span>`)
-    document.getElementById('quote').innerHTML = template
-    console.log(template);
+    ProxyState.quote.forEach(q => template += q.Template)
+    // document.getElementById('quote').innerHTML = template
+    function _getQuote(){
+        _getQuote()
+    }
 }
 export class QuoteController{
     constructor(){
         ProxyState.on('quote', _drawQuote)
-        this.getQuote
-        _drawQuote
-    }
-
-    getQuote(){
         quoteService.getQuote()
-        _drawQuote
+        _drawQuote()
+    }   
+
+  async  getQuote(){
+      await quoteService.getQuote()
     }
 }
