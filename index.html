@@ -20,7 +20,7 @@
     <div class="container-fluid d-flex justify-content-between flex-column">
       <div class="row volume">
         <div class="col-md-8 d-flex justify-content-between">
-          <div id="quote" class="p-2 opacity-75 poppin selectable" onclick="app.quoteController.getQuote()">
+          <div id="quote" class="p-2 opacity-75">
             <!-- Quote here -->
           </div>
 
@@ -34,7 +34,7 @@
 
       <div class="row volume">
         <div class="col-12 d-flex justify-content-center">
-          <div class="p-4 poppin">
+          <div class="p-4">
             <div id="greeting" class="text-center bg-info text-light opacity-75">Good day!</div>
             <h1 id="clock" class="shadow p-4 bg-dark text-light" style="font-size: 4em;">
               <!-- My clock here -->
@@ -48,31 +48,26 @@
           <div>
             <form class="p-2" onsubmit="app.todosController.addTodo()">
               <div class="d-flex justify-content-between bg-dark text-light opacity-75 border-bottom">
-                <h4>Todo:</h4>
+                <h4>Today's Todos:</h4>
                 <div id="fraction"></div>
               </div>
               <div id="todos">
               </div>
               <!--Some Template stuff? <input class="m-2" type="checkbox" name="completed" id="completed">
               <label class="m-2" for="todo">Todo done?</label> -->
-              <div class="d-flex btn-group">
+              <div class="d-flex">
                 <input id="description" name="description" class="m-1 poppin" type="text" placeholder="name it..." required>
-                <button class="m-1 poppin" type="submit">New Todo</button>
+                <button class="m-1 poppin btn btn-primary" type="submit">Submit</button>
               </div>
             </form>
           </div>
         </div>
         <div class="col-md-4 d-flex flex-column justify-content-end">
           <div>
-            <div class="bg-dark text-light p-3 rounded shadow opacity-50" id="artist">
+            <div class="bg-dark text-light p-3 m-3 rounded shadow opacity-50" id="artist">
               <!-- Photographer credits here -->
             </div>
           </div> 
-        </div>
-      </div>
-      <!-- Empty row, I'm not sure what I was thinking -->
-      <div class="row">
-        <div class="col-12">
         </div>
       </div>
     </div>
