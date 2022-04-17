@@ -5,7 +5,7 @@ class AppState extends EventEmitter {
 
   todos = []
 
-  quote = []
+  quote = null
   
     /** @type {import('./Models/Background').Background} */
   background = null

@@ -2,3 +2,7 @@
 .volume{
     min-height: 25vh;
 }
+
+.poppin:hover {
+    transform: scale(1.02);
+}

@@ -4,7 +4,8 @@ export class Quote{
     this.author = data.author
     }
     get Template(){
-        return `<h3>Quote of the day:</h3><span>"${this.content}"</span><br><span class="on-hover">- ${this.author}</span>`
+        return `<div class="rounded bg-dark text-light shadow p-2"><h3>Quote of the day:</h3><span>"${this.content}"</span><br><span class="on-hover">- ${this.author}</span>
+        </div>`
                 
     }
 }
