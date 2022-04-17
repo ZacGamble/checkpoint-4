@@ -8,10 +8,9 @@ class TodosService {
        let foundTodo = ProxyState.todos.find(t => t.id == id)
        foundTodo.completed = !foundTodo.completed
        const res = await sandboxApi.put('zac/todos/' + foundTodo.id, foundTodo)
-       console.log(res.data);
        const editedTodo = ProxyState.todos.findIndex(t => t.id == res.data.id)
        const newTodo = new Todo(res.data)
-       ProxyState.todos.splice(editedTodo, 1, new Todo)
+       ProxyState.todos.splice(editedTodo, 1, newTodo)
        ProxyState.todos = ProxyState.todos
     }
     async deleteTodo(id) {

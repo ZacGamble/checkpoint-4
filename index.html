@@ -20,20 +20,21 @@
     <div class="container-fluid d-flex justify-content-between flex-column">
 
       <div class="row volume">
-        <div class="col-12 d-flex justify-content-between">
+        <div class="col-md-8 d-flex justify-content-between">
             <div class="m-3 p-3">
-              <span class="bg-dark text-light p-3 rounded shadow opacity-50" id="artist"></span>
+              <div class="bg-dark text-light p-3 rounded shadow opacity-50" id="artist"></div>
             </div> 
-            <div id="weather" class="opacity-75 p-2">
-              <!-- weather template markup in here -->
-            </div> 
+          
         </div>
+        <div class="col-md-4">  <div id="weather" class="opacity-75 p-2">
+              <!-- weather template markup in here -->
+            </div> </div>
       </div>
 
       <div class="row volume">
         <div class="col-12 d-flex justify-content-center">
           <div class="p-5">
-            <div class="text-center bg-info text-light opacity-75">Good day!</div>
+            <div id="greeting" class="text-center bg-info text-light opacity-75">Good day!</div>
             <h1 id="clock" class="shadow p-5 bg-dark text-light" style="font-size: 4em;">
               <!-- My clock here -->
             </h1>
@@ -43,14 +44,17 @@
 
       <div class="row volume">
         <div class="col-md-6">
-          <div id="quote" class="bg-dark text-light p-4 rounded shadow">
+          <div id="quote" class="bg-dark text-light p-4 rounded shadow mt-5">
             <!-- Quote here -->
           </div>
         </div>
         <div class="col-md-6">
           <div>
-            <form class="border bg-dark text-light p-3 rounded" onsubmit="app.todosController.addTodo()">
-              <h4>Todo:</h4>
+            <form class=" bg-dark text-light p-3 rounded" onsubmit="app.todosController.addTodo()">
+              <div class="d-flex justify-content-between">
+                <h4>Todo:</h4>
+                <div id="fraction"></div>
+              </div>
               <div id="todos">
               </div>
               <!-- <input class="m-2" type="checkbox" name="completed" id="completed">

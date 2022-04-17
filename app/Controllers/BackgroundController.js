@@ -2,7 +2,6 @@ import { ProxyState } from "../AppState.js";
 import { backgroundService } from "../Services/BackgroundService.js";
 
 function _drawBackground(){
-    const bg = ProxyState.background
     document.body.style.backgroundImage = ProxyState.background.Template
     document.getElementById('artist').innerText = ProxyState.background.DetailsTemplate
 }

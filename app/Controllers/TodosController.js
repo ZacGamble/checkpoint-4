@@ -6,13 +6,18 @@ function _drawTodos() {
     ProxyState.todos.forEach(t => template += t.Template)
     document.getElementById('todos').innerHTML = template 
 }
+function _drawFraction() {
+    let template = ''
+    ProxyState.todos.find(t => template += t.FractionTemplate)
+    document.getElementById('fraction').innerHTML = template 
+}
 export class TodosController {
     constructor(){
-        ProxyState.on('todos', _drawTodos)
-        _drawTodos()
         this.getTodos()
+        ProxyState.on('todos', _drawTodos)
+        ProxyState.on('todos', _drawFraction)
     }
-   async addTodo(id){
+   async addTodo(){
         window.event.preventDefault();
         try {
             /**@type {HTMLFormElement} */
@@ -50,9 +55,10 @@ export class TodosController {
     async trackTodo(id){
         try {
             await todosService.trackTodo(id)
+            
         } catch (error) {
             // Pop.toast(error.message, 'error')
-            console.log(error);
+            // console.log(error);
         }
     }
 }
