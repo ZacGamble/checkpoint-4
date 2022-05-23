@@ -9,6 +9,8 @@ export class Background{
     }
 
     get DetailsTemplate(){
-        return `Background photograph compliments of user "${this.artist}"`
+        return `
+        Background photograph compliments of user "${this.artist}"
+        `
     }
 }

@@ -1,8 +1,12 @@
 /* BASIC STYLES HERE */
-.volume{
+.volume {
     min-height: 25vh;
 }
 
 .poppin:hover {
     transform: scale(1.02);
+}
+
+.text {
+    text-shadow: 2px 2px #000;
 }

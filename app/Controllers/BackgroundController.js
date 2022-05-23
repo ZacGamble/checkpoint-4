@@ -5,7 +5,6 @@ function _drawBackground(){
     document.body.style.backgroundImage = ProxyState.background.Template
     document.getElementById('artist').innerText = ProxyState.background.DetailsTemplate
 }
-//    url(https://wallpaperaccess.com/full/1385474.jpg)
 
 async function _getBackground(){
     try {
@@ -21,6 +20,5 @@ export class BackgroundController{
     constructor(){
         ProxyState.on('background', _drawBackground)
         _getBackground()
-        // _drawBackground()
     }
 }

@@ -14,7 +14,7 @@ export class Todo {
     
     get Template(){
         return `
-        <div class="d-flex justify-content-between p-1 border-bottom poppin bg-dark text-light rounded opacity-75">
+        <div class="d-flex justify-content-between p-1 border-bottom poppin text-light rounded opacity-75 text">
         <input ${this.completed == true ? 'checked' : ''} onclick="app.todosController.trackTodo('${this.id}')" class='form-check-input me-1' name="done" type ='checkbox' id="done" value="yes">
         <li>${this.description}
         </li>

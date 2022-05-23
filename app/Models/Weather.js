@@ -8,19 +8,19 @@ export class Weather{
     }
     get Template(){
         return `  <div onclick="app.weatherController.toggleTemp()" 
-        class="d-flex flex-column bg-dark text-light shadow p-3 rounded selectable" title="Weather">
-        <div class="fs-2 border-bottom"><img src="https://openweathermap.org/img/wn/${this.icon}@2x.png"/>${this.main} °F 
+        class="d-flex flex-column text-light text p-3 rounded selectable" title="Weather">
+        <div class="fs-2 border-bottom text"><img src="https://openweathermap.org/img/wn/${this.icon}@2x.png"/>${this.main} °F 
         </div>
-        <div class="fs-5 ">${this.weather}</div>
-        <div class="fs-5">${this.name}</div>
+        <div class="fs-5 text">${this.weather}</div>
+        <div class="fs-5 text">${this.name}</div>
         </div>`
     }
     get CelsiusTemplate(){
         return `  <div onclick="app.weatherController.toggleTemp()" 
-        class="d-flex flex-column bg-dark text-light shadow p-3 rounded selectable" title="Weather">
-        <div class="fs-2 border-bottom"><img src="https://openweathermap.org/img/wn/${this.icon}@2x.png"/>${Math.floor((this.main-32)/1.8)} °C </div>
-        <div class="fs-5 ">${this.weather}</div>
-        <div class="fs-5">${this.name}</div>
+        class="d-flex flex-column text text-light shadow p-3 rounded selectable" title="Weather">
+        <div class="fs-2 border-bottom text"><img src="https://openweathermap.org/img/wn/${this.icon}@2x.png"/>${Math.floor((this.main-32)/1.8)} °C </div>
+        <div class="fs-5 text">${this.weather}</div>
+        <div class="fs-5 text">${this.name}</div>
         </div>`
     }
 }
