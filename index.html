@@ -18,35 +18,35 @@
   <main>
 
     <div class="container-fluid d-flex justify-content-between flex-column">
-      <div class="row volume">
+      <div class="row">
         <div class="col-md-8 d-flex justify-content-between">
-          <div id="quote" class="p-2 opacity-75">
+          <div id="quote" class="p-1">
             <!-- Quote here -->
           </div>
 
         </div>
         <div class="col-md-4">
-          <div id="weather" class="opacity-75 p-2 poppin">
+          <div id="weather" class=" p-1 poppin">
             <!-- weather template markup in here -->
           </div>
         </div>
       </div>
 
-      <div class="row volume">
+      <div class="row">
         <div class="col-12 d-flex justify-content-center">
-          <div class="p-4 rounded">
-            <div id="greeting" class="text-center bg-info text-light opacity-75 rounded-top">Good day!</div>
-            <h1 id="clock" class="shadow p-4 bg-dark text-light text rounded-bottom" style="font-size: 4em;">
+          <div class="rounded" style="font-size: 2em;">
+            <div id="greeting" class="text-center text text-light rounded-top border-bottom">Good day!</div>
+            <div id="clock" class="clock text-light text rounded-bottom" style="font-size: 4em;">
               <!-- My clock here -->
-            </h1>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="row volume">
-        <div class="col-md-8 text">
+      <div class="row">
+        <div class="col-md-8 text fw-bold">
           <div>
-            <form class="p-2" onsubmit="app.todosController.addTodo()">
+            <form class="p-1" onsubmit="app.todosController.addTodo()">
               <div class="d-flex justify-content-between text-light border-bottom">
                 <h4>Today's Todos:</h4>
                 <div id="fraction"></div>
@@ -61,11 +61,9 @@
             </form>
           </div>
         </div>
-        <div class="col-md-4 d-flex flex-column justify-content-end">
-          <div>
-            <div class="text text-light p-3 m-3 rounded opacity-75" id="artist">
-              <!-- Photographer credits here -->
-            </div>
+        <div class="col-md-4 d-flex flex-column justify-content-start">
+          <div class="text text-light p-1 m-1 rounded opacity-75 fw-bold" id="artist">
+            <!-- Photographer credits here -->
           </div>
         </div>
       </div>

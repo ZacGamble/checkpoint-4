@@ -1,6 +1,7 @@
 /* BASIC STYLES HERE */
 .volume {
     min-height: 25vh;
+    max-height: 33vh;
 }
 
 .poppin:hover {
@@ -9,4 +10,12 @@
 
 .text {
     text-shadow: 2px 2px #000;
+}
+
+.clock {
+    text-shadow: 3px 3px #000;
+}
+
+.todo:hover {
+    background-color: rgb(39, 39, 167);
 }
