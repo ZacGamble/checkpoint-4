@@ -18,7 +18,7 @@ export class Todo {
         <input ${this.completed == true ? 'checked' : ''} onclick="app.todosController.trackTodo('${this.id}')" class='form-check-input me-1 action' name="done" type ='checkbox' id="done" value="yes" title="click to toggle status">
         <li>${this.description}
         </li>
-        <i class="mdi mdi-delete selectable pointer bg-info text-dark on-hover rounded" title="Delete" onclick="app.todosController.deleteTodo('${this.id}')" minlength="3" maxlength="50">
+        <i class="mdi mdi-delete selectable pointer text-light on-hover rounded" title="Delete" onclick="app.todosController.deleteTodo('${this.id}')" minlength="3" maxlength="50">
         </i>
         </div>
         `  

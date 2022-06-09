@@ -5,7 +5,7 @@
 }
 
 .poppin:hover {
-    transform: scale(1.02);
+    transform: scale(1.005);
 }
 
 .text {
@@ -17,5 +17,5 @@
 }
 
 .todo:hover {
-    background-color: rgb(39, 39, 167);
+    background-color: rgba(39, 39, 167, 0.3);
 }
